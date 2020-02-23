@@ -2,4 +2,4 @@
 
 This game is only for desktop browser
 
-no mobile version)
+Use the W, A, S, D keys to control)
