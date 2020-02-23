@@ -6,7 +6,7 @@ let appleX = 1;
 let appleY = 3;
 let counter = 0;
 let startButton = document.querySelector('.button'),
-    mainContent = document.querySelector('.main-content');
+    mainContent = document.querySelector('.main-content')
 
 
 const showElem = elem => elem.style.display = 'flex';
