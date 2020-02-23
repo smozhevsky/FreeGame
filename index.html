@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FreeGame</title>
-  <link rel="stylesheet" href="/style/style.css">
-</head>
-<body>
 
-  <table>
-    <tr>
-      <td id="x1y1">
-        <img id="pacman" src="/image/pacman.png" alt="pacman">
-      </td>
-      <td id="x2y1"></td>
-      <td id="x3y1"></td>
-    </tr>
-    <tr>
-      <td id="x1y2"></td>
-      <td id="x2y2"></td>
-      <td id="x3y2"></td>
-    </tr>
-    <tr>
-      <td id="x1y3"> <img id="apple" src="/image/apple.png" alt="apple"> </td>
-      <td id="x2y3"></td>
-      <td id="x3y3"></td>
-    </tr>
-  </table>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+    <title>FreeGame</title>
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
 
-  <div id="score">0</div>
+  <body>
+    <div class="container">
+      <div class="inner">
+        <button class="button">
+          <span class="button__line button__line--top"></span>
+          <span class="button__line button__line--right"></span>
+          <span class="button__line button__line--bottom"></span>
+          <span class="button__line button__line--left"></span>
 
-  <script src="/script/script.js"></script>
-</body>
+          start</button>
+        <div class="main-content" style="display:none">
+
+          <table class="main-table">
+            <tr>
+              <td id="x1y1">
+                <img id="pacman" src="/image/pacman.png" alt="pacman">
+              </td>
+              <td id="x2y1"></td>
+              <td id="x3y1"></td>
+            </tr>
+            <tr>
+              <td id="x1y2"></td>
+              <td id="x2y2"></td>
+              <td id="x3y2"></td>
+            </tr>
+            <tr>
+              <td id="x1y3"> <img id="apple" src="/image/apple.png" alt="apple"> </td>
+              <td id="x2y3"></td>
+              <td id="x3y3"></td>
+            </tr>
+          </table>
+          <div id="score">0</div>
+        </div>
+      </div>
+
+    </div>
+    <script src="/script/script.js"></script>
+  </body>
+
 </html>

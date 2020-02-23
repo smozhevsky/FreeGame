@@ -5,10 +5,20 @@ let deltaY = 0;
 let appleX = 1;
 let appleY = 3;
 let counter = 0;
+let startButton = document.querySelector('.button'),
+    mainContent = document.querySelector('.main-content');
 
+
+const showElem = elem => elem.style.display = 'flex';
+const hideElem = elem => elem.style.display = 'none';
+
+startButton.addEventListener('click', () => {
+    showElem(mainContent);
+    hideElem(startButton);
+});
 
 // addEventListener
-window.onkeypress = function(event) {
+window.onkeypress = function (event) {
     // switch-case
     if (event.key === "w") {
         deltaX = 0;
@@ -27,8 +37,9 @@ window.onkeypress = function(event) {
         deltaY = 1;
     }
 
+    // console.log(event);
     tickLogic();
-} 
+}
 
 
 let tickLogic = function () {
@@ -41,17 +52,17 @@ let tickLogic = function () {
     if (newY < 4 && newY > 0) {
         y = newY;
     }
-    
-    if (x === appleX && y === appleY) {
-      counter++;
-      score.innerText = counter;
-      while (appleX === x && appleY === y) {
-        appleX = Math.floor(Math.random() * 3) + 1;
-        appleY = Math.floor(Math.random() * 3) + 1;
-      }
 
-      let nextAppleStep = "x" +  appleX + "y" + appleY; // "x1y1"
-      window[nextAppleStep].append(apple);
+    if (x === appleX && y === appleY) {
+        counter++;
+        score.innerText = counter;
+        while (appleX === x && appleY === y) {
+            appleX = Math.floor(Math.random() * 3) + 1;
+            appleY = Math.floor(Math.random() * 3) + 1;
+        }
+
+        let nextAppleStep = "x" + appleX + "y" + appleY; // "x1y1"
+        window[nextAppleStep].append(apple);
     }
 
 
